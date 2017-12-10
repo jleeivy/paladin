@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1512950165 source:c:\users\jacob\documents\paladin\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<time.h>
+	"items.h"
+	"spells.h"
+	"player.h"
+	"mob.h"
+
+1510184102 c:\users\jacob\documents\paladin\items.h
+	<iostream>
+	<string>
+
+1510227216 source:c:\users\jacob\documents\paladin\items.cpp
+	"items.h"
+
+1512859401 c:\users\jacob\documents\paladin\spells.h
+	<string>
+
+1512868302 c:\users\jacob\documents\paladin\player.h
+	<iostream>
+	<string>
+
+1512868302 source:c:\users\jacob\documents\paladin\player.cpp
+	"player.h"
+
+1512859474 source:c:\users\jacob\documents\paladin\spells.cpp
+	"spells.h"
+
+1510227648 c:\users\jacob\documents\paladin\createspells.h
+
+1510228958 source:c:\users\jacob\documents\paladin\createspells.cpp
+	"spells.h"
+
+1510229563 source:c:\users\jacob\documents\paladin\createitems.cpp
+	"items.h"
+
+1510270815 c:\users\jacob\documents\paladin\functions.h
+	"spells.h"
+	"player.h"
+
+1510782277 c:\users\jacob\documents\paladin\misc.h
+
+1510782355 source:c:\users\jacob\documents\paladin\misc.cpp
+	"misc.h"
+
+1512882120 c:\users\jacob\documents\paladin\mob.h
+
+1512884336 source:c:\users\jacob\documents\paladin\mob.cpp
+	"mob.h"
+
