@@ -197,7 +197,9 @@ int main()
 
 
     //math to determine internal values. all values base on information as given by lead of dev team "Celestalon"
-    double paladinBlockCoef=.6;
+    double paladinBlockCoef=.4;
+    double paladinUnBlockCoef=1-paladinBlockCoef;
+
     int miss=500;
 
     const double kValueArmor=7390;
@@ -214,6 +216,8 @@ int main()
     const double paladinBlockConstant=.886;
     double totalBlock=8+totalMast/statMast;
     int block=500+(totalBlock*kValueblock)/(totalBlock+kValueblock*paladinBlockConstant)*100;
+    int leftDamage;
+
     //end of calculations
 
     string result;
@@ -244,9 +248,10 @@ int main()
                 } else {
                     SotRCoef=1.0;
                 }
-                damage=damage*redVersCoef*armorCoef*Sanctuary.getCoef1()*SotRCoef*paladinBlockCoef;  //Versatility and armor damage reduction applied
+                leftDamage=damage*redVersCoef*armorCoef*Sanctuary.getCoef1()*SotRCoef*paladinBlockCoef;  //Versatility and armor damage reduction applied
+                damage=damage*redVersCoef*armorCoef*Sanctuary.getCoef1()*SotRCoef*paladinUnBlockCoef;  //Versatility and armor damage reduction applied
                 player.damage(damage);
-                cout<<setw(7)<<left<<tick<<" Melee "<<result<<" Player for "<<damage<<" damage"<<endl;
+                cout<<setw(7)<<left<<tick<<" Melee Hits Player for "<<damage<<" damage ("<<leftDamage<<" blocked)"<<endl;
             } else if (result=="Hits") {
                 if (durSotR>0) {
                     SotRCoef=SotRMitigation(totalBlock,consecUp);
